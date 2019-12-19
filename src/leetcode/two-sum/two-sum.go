@@ -12,11 +12,11 @@ func twoSum(nums []int, target int) []int {
 		if ok {
 			// result = append(result, numIndex)
 			// result = append(result, index)
-			return []int {numIndex, index}
+			return []int{numIndex, index}
 		}
-		numDict[target - value] = index
+		numDict[target-value] = index
 	}
-    return []int {}
+	return []int{}
 }
 
 func main() {
