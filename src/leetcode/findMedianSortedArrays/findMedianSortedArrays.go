@@ -13,8 +13,10 @@ func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 		i := (imin + imax) / 2
 		j := halfLen - i
 		if i < m && nums2[j-1] > nums1[i] {
+			// i太小了往右挪; i < m => j > 0
 			imin = i + 1
 		} else if i > 0 && nums1[i-1] > nums2[j] {
+			// i太大了往左挪; i > 0 => j < n
 			imax = i - 1
 		} else {
 			var maxLeft int
