@@ -1,42 +1,76 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
-func main() {
-   /* 创建切片 */
-   numbers := []int{0,1,2,3,4,5,6,7,8,9,10}  
-   printSlice(numbers)
-
-   /* 打印原始切片 */
-   fmt.Println("numbers ==", numbers)
-
-   /* 打印子切片从索引1(包含) 到索引4(不包含)*/
-   fmt.Println("numbers[1:4] ==", numbers[1:4])
-
-   /* 默认下限为 0*/
-   fmt.Println("numbers[:3] ==", numbers[:3])
-
-   /* 默认上限为 len(s)*/
-   fmt.Println("numbers[4:] ==", numbers[4:])
-
-   numbers1 := make([]int,0,5)
-   printSlice(numbers1)
-
-   /* 打印子切片从索引  0(包含) 到索引 2(不包含) */
-   number2 := numbers[:2]
-   printSlice(number2)
-
-   /* 打印子切片从索引 2(包含) 到索引 5(不包含) */
-   number3 := numbers[2:5]
-   printSlice(number3)
-
-   number4 := numbers[2:]
-   printSlice(number4)
-
-   number5 := numbers[:2]
-   printSlice(number5)
+func fibonacci() func() int {
+	a, b := 0, 1
+	return func() int {
+		defer func() {
+			a, b = b, a+b
+		}()
+		return a
+	}
 }
 
-func printSlice(x []int){
-   fmt.Printf("len=%d cap=%d slice=%v address=%p\n",len(x),cap(x),x,&x)
+func main() {
+
+	f := fibonacci()
+	for i := 0; i < 10; i++ {
+		fmt.Println(f())
+	}
+
+	s := "I am learning Go!"
+	ss := strings.Fields(s)
+	fmt.Printf("%q\n", ss)
+
+	/* 创建切片 */
+	numbers := []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	printSlice(numbers)
+
+	/* 打印原始切片 */
+	fmt.Println("numbers ==", numbers)
+
+	/* 打印子切片从索引1(包含) 到索引4(不包含)*/
+	fmt.Println("numbers[1:4] ==", numbers[1:4])
+
+	/* 默认下限为 0*/
+	fmt.Println("numbers[:3] ==", numbers[:3])
+
+	/* 默认上限为 len(s)*/
+	fmt.Println("numbers[4:] ==", numbers[4:])
+
+	numbers1 := make([]int, 0, 5)
+	printSlice(numbers1)
+
+	/* 打印子切片从索引  0(包含) 到索引 2(不包含) */
+	number2 := numbers[:2]
+	printSlice(number2)
+
+	/* 打印子切片从索引 2(包含) 到索引 5(不包含) */
+	number3 := numbers[2:5]
+	printSlice(number3)
+
+	number4 := numbers[2:]
+	printSlice(number4)
+
+	number5 := numbers[:2]
+	printSlice(number5)
+
+	fmt.Println("0")
+	defer fmt.Println("defer")
+	fmt.Println("normal")
+
+	test := []int{1, 2, 3, 4, 5}
+	test1 := test[:2]
+	test2 := test1[2:5]
+	printSlice(test1)
+	printSlice(test2)
+	printSlice(test2[0:1])
+}
+
+func printSlice(x []int) {
+	fmt.Printf("len=%d cap=%d slice=%v address=%p\n", len(x), cap(x), x, &x)
 }
