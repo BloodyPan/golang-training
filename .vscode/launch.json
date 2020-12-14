@@ -10,7 +10,10 @@
             "request": "launch",
             "mode": "auto",
             "program": "${fileDirname}",
-            "env": {},
+            "env": {
+                "GOPATH": "/Users/lu/golang/libs:/Users/lu/golang/test:/Users/lu/Github/golang-training:/Users/lu/golang/www",
+                "GOROOT": "/usr/local/go"
+            },
             "args": []
         }
     ]
