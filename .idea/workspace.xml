@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cee1aefd-33a0-42c7-ab49-6964cf8e0e93" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/exercise/exercise-equivalent-binary-trees/exercise-equivalent-binary-trees.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/exercise/exercise-equivalent-binary-trees/exercise-equivalent-binary-trees.go" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GOROOT" path="/usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1ldfsdbOc3tzhnQZwWrWqXmJvXS" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable..is.expanded" value="false" />
+    <property name="configurable.GoLibrariesConfigurable.is.expanded" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="go.vgo" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/exercise" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="go build longestPalindrome.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="golang-training" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/src/leetcode/longestPalindrome/longestPalindrome.go" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build longestPalindrome.go" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="590" y="426" key="#GOROOT" timestamp="1607942674383">
+      <screen x="0" y="25" width="1680" height="962" />
+    </state>
+    <state x="590" y="426" key="#GOROOT/0.25.1680.962@0.25.1680.962" timestamp="1607942674383" />
+    <state x="300" y="158" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607943326772">
+      <screen x="0" y="25" width="1680" height="962" />
+    </state>
+    <state x="300" y="158" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1680.962@0.25.1680.962" timestamp="1607943326772" />
+    <state width="1628" height="243" key="GridCell.Tab.0.bottom" timestamp="1608104922380">
+      <screen x="0" y="25" width="1680" height="962" />
+    </state>
+    <state width="1628" height="243" key="GridCell.Tab.0.bottom/0.25.1680.962@0.25.1680.962" timestamp="1608104922380" />
+    <state width="1628" height="243" key="GridCell.Tab.0.center" timestamp="1608104922379">
+      <screen x="0" y="25" width="1680" height="962" />
+    </state>
+    <state width="1628" height="243" key="GridCell.Tab.0.center/0.25.1680.962@0.25.1680.962" timestamp="1608104922379" />
+    <state width="1628" height="243" key="GridCell.Tab.0.left" timestamp="1608104922378">
+      <screen x="0" y="25" width="1680" height="962" />
+    </state>
+    <state width="1628" height="243" key="GridCell.Tab.0.left/0.25.1680.962@0.25.1680.962" timestamp="1608104922378" />
+    <state width="1628" height="243" key="GridCell.Tab.0.right" timestamp="1608104922379">
+      <screen x="0" y="25" width="1680" height="962" />
+    </state>
+    <state width="1628" height="243" key="GridCell.Tab.0.right/0.25.1680.962@0.25.1680.962" timestamp="1608104922379" />
+    <state x="224" y="54" key="SettingsEditor" timestamp="1607943065313">
+      <screen x="0" y="25" width="1680" height="962" />
+    </state>
+    <state x="224" y="54" key="SettingsEditor/0.25.1680.962@0.25.1680.962" timestamp="1607943065313" />
+  </component>
+</project>
