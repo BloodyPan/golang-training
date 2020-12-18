@@ -6,11 +6,12 @@ import (
 )
 
 func convert(s string, numRows int) string {
+	if numRows == 1 {
+		return s
+	}
+
 	strLen := len(s)
 	minUtil := 2 * numRows - 2
-	if numRows == 1 {
-		minUtil = 1
-	}
 	radio := int(math.Ceil(float64(strLen) / float64(minUtil)))
 	carry := strLen % minUtil
 	if carry > 0 && carry <= 4 {
@@ -20,9 +21,6 @@ func convert(s string, numRows int) string {
 	}
 
 	subArrayLen := radio*(numRows-1) + carry
-	if numRows == 1 {
-		subArrayLen = strLen
-	}
 	resArray := make([][]rune, numRows)
 
 	for i := 0; i < numRows; i++ {
@@ -37,14 +35,10 @@ func convert(s string, numRows int) string {
 
 
 		if x == numRows - 1 {
-			if numRows != 1 {
-				incrX = -1
-			}
+			incrX = -1
 			incrY = 1
 		} else if x == 0 {
-			if numRows != 1 {
-				incrX = 1
-			}
+			incrX = 1
 			incrY = 0
 		}
 
@@ -68,6 +62,6 @@ func convert(s string, numRows int) string {
 }
 
 func main() {
-	fmt.Println(convert("PAYPALISHIRING", 4))
-	//fmt.Println(convert("ABCDE", 1))
+	//fmt.Println(convert("PAYPALISHIRING", 4))
+	fmt.Println(convert("ABCDE", 4))
 }
