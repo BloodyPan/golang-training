@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 /*
  * @lc app=leetcode.cn id=14 lang=golang
  *
@@ -7,35 +9,19 @@ package main
  */
 
 // @lc code=start
-import (
-	"bytes"
-)
-
-func min(x int, y int) int {
-	if x > y {
-		return y
-	}
-	return x
-}
 
 func longestCommonPrefix(strs []string) string {
 	if len(strs) == 0 {
 		return ""
 	}
-	preStr := strs[0]
-	for i := 1; i < len(strs); i++ {
-		commonPrefix := bytes.Buffer{}
-		minLen := min(len(strs[i]), len(preStr))
-		for j := 0; j < minLen; j++ {
-			if strs[i][j] == preStr[j] {
-				commonPrefix.WriteByte(preStr[j])
-			} else {
-				break
+	for i := 0; i < len(strs[0]); i++ {
+		for j := 1; j < len(strs); j++ {
+			if i == len(strs[j]) || strs[j][i] != strs[0][i] {
+				return strs[0][:i]
 			}
 		}
-		preStr = commonPrefix.String()
 	}
-	return preStr
+	return strs[0]
 }
 
 // @lc code=end
@@ -43,5 +29,6 @@ func longestCommonPrefix(strs []string) string {
 func main() {
 	longestCommonPrefix([]string{"flower", "flow", "flight"})
 	longestCommonPrefix([]string{"cir", "car"})
-	//fmt.Println(longestCommonPrefix([]string{"cir", "car"}))
+	fmt.Println(longestCommonPrefix([]string{"cir", "car"}))
+	fmt.Println(longestCommonPrefix([]string{"cir", "car"}))
 }
