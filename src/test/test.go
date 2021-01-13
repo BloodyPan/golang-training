@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"strings"
 )
 
 func fibonacci() func() int {
@@ -16,37 +15,28 @@ func fibonacci() func() int {
 }
 
 func main() {
-
-	f := fibonacci()
 	for i := 0; i < 10; i++ {
-		fmt.Println(f())
+		go func() { fmt.Println(i) }()
 	}
 
-	s := "I am learning Go!"
-	ss := strings.Fields(s)
-	fmt.Printf("%q\n", ss)
+	// for i := 0; i < 100; i++ {
+	// 	j := i
+	// 	go func() {
+	// 		fmt.Println(j)
+	// 		fmt.Printf("%p, %p\n", &i, &j)
+	// 	}()
+	// }
 
-	/* 创建切片 */
-	numbers := []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
-	printSlice(numbers)
+	// f := fibonacci()
+	// for i := 0; i < 10; i++ {
+	// 	fmt.Println(f())
+	// }
 
-	/* 打印原始切片 */
-	fmt.Println("numbers ==", numbers)
+	fmt.Printf("---- %s\n", " -----")
 
-	numbers1 := make([]int, 0, 5)
-	printSlice(numbers1)
-
-	/* 打印子切片从索引  0(包含) 到索引 2(不包含) */
-	number2 := numbers[:2]
-	printSlice(number2)
-
-	/* 打印子切片从索引 2(包含) 到索引 5(不包含) */
-	number3 := numbers[2:5]
-	printSlice(number3)
-
-	fmt.Println("0")
-	defer fmt.Println("defer")
-	fmt.Println("normal")
+	// s := "I am learning Go!"
+	// ss := strings.Fields(s)
+	// fmt.Printf("%q\n", ss)
 }
 
 func printSlice(x []int) {

@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"container/ring"
+	"fmt"
+)
 
 /*
  * @lc app=leetcode.cn id=14 lang=golang
@@ -22,6 +25,7 @@ func longestCommonPrefix(strs []string) string {
 		}
 	}
 	return strs[0]
+	ring.Ring{}
 }
 
 // @lc code=end
@@ -31,4 +35,10 @@ func main() {
 	longestCommonPrefix([]string{"cir", "car"})
 	fmt.Println(longestCommonPrefix([]string{"cir", "car"}))
 	fmt.Println(longestCommonPrefix([]string{"cir", "car"}))
+
+	a, b := 5, 6
+	fmt.Printf("%d %d\n", a, b)
+
+	a, b = b, a
+	fmt.Printf("%d %d", a, b)
 }
